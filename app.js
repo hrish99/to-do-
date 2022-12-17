@@ -64,7 +64,7 @@ app.post("/", function (req, res) {
     name: itemName,
   });
 
-  if (listName === dateToday.getDay()) {
+  if (listName === "Today") {
     newItem.save();
     res.redirect("/");
   } else {
@@ -83,7 +83,7 @@ app.post("/", function (req, res) {
 app.post("/delete", function (req, res) {
   const checkedItemId = req.body.checkbox;
   const listName = req.body.listName;
-  if (listName === dateToday.getDay()) {
+  if (listName === "Today") {
     Item.findByIdAndRemove(checkedItemId, function (err) {
       if (!err) {
         res.redirect("/");
