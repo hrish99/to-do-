@@ -4,7 +4,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require("lodash");
-const dateToday = require("./date.js");
 const app = express();
 let path = require("path");
 
