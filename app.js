@@ -49,7 +49,7 @@ app.get("/", function (req, res) {
     } else {
       console.log(foundItems);
       res.render("list", {
-        listTitle: dateToday.getDay(),
+        listTitle: "Today",
         newListItems: foundItems,
       });
     }
